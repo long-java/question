@@ -22,6 +22,7 @@ Mình đang sử dụng kubernet với circleci để triển khai docker. Khi m
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Sometimes it's like this:
+
         [web]
         54.210.76.165
         52.91.189.108
@@ -43,6 +44,7 @@ Sometimes it's like this:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Here is the deploy script: deploy-application.yml:
+
     - name: "Deploy application"
     hosts: web[0]
     user: ubuntu
@@ -62,6 +64,7 @@ Here is the deploy script: deploy-application.yml:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 prj5-deploy:
+
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -93,6 +96,7 @@ prj5-deploy:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 config.yml
+
     deploy-docker:
         docker:
         - image: python:3.7-alpine3.11
